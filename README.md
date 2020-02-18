@@ -1,4 +1,4 @@
-# Cloud Dynamic DNS
+# Google Cloud Platform Dynamic DNS Docker
 
 This project contains a simple [Dynamic DNS](https://en.wikipedia.org/wiki/Dynamic_DNS) client that can be used with cloud services. It simply gets your current IP address and sets it to DNS records in backing DNS services. It will do it's best to make sure that the DNS record is always there and set to the desired value, even if something or someone updates or deletes it. It is intended to be used where public internet IPs are assigned dynamically, such as home networks.
 
