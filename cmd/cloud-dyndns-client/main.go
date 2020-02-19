@@ -116,7 +116,7 @@ func getConfig(pathToJSON string) (Config, error) {
 func main() {
 	addr := flag.String("addr", "", "Address to listen on for health checks.")
 	version := flag.Bool("version", false, "Print the version and exit.")
-	config := flag.String("config", "/etc/cloud-dyndns-client/config.json", "The path to the JSON config file.")
+	config := flag.String("config", "/config/config.json", "The path to the JSON config file.")
 
 	flag.Parse()
 

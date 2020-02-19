@@ -4,38 +4,19 @@ This project is a containerized implementation of work done [here](https://githu
 It contains both the underlying application and necessary components to launch it directly in Docker.
 
 ##Docker Variables
+
 Volumes
-  - /pathToFile:/config/config.json
+  - /config
 Ports
-Credentials
-GOOGLE_APPLICATION_CREDENTIALS
+  - 8080
+Environmental
+  - GOOGLE_APPLICATION_CREDENTIALS
 
-### Google Cloud Platform Setup
+##Configuration
 
-Set up the client to use GCP by first creating a service account.
+1. You'll need to already have setup your DNS in GCP and created the necessary service account credentials, etc. This is beyond the scope of this project but instructions for it can be easily found online. Once you've secured your GCP credentials, save the JSON as `google.json`.
 
-1. Create a GCP service account
-
-```
-SA_EMAIL=$(gcloud iam service-accounts --format='value(email)' create cloud-dyndns-client)
-```
-
-2.  Create a JSON key file associated with the new service account
-
-```
-gcloud iam service-accounts keys create service-account.json --iam-account=$SA_EMAIL
-```
-
-3. Add an IAM policy to the service account for the project.
-
-```
-PROJECT=$(gcloud config list core/project --format='value(core.project)')
-gcloud projects add-iam-policy-binding $PROJECT --member serviceAccount:$SA_EMAIL --role roles/dns.admin
-```
-
-### Configuration
-
-Create a `config.json` for the client. Enter the domain name you want to update, the GCP project ID, and Cloud DNS managed zone name. Multiple domains can be added as part of the configuration.
+2. In that same directory, create a `config.json` for the client. Enter the domain name you want to update, the GCP project ID, and Cloud DNS managed zone name. Multiple domains can be added as part of the configuration.
 
 ```
 {
@@ -49,3 +30,17 @@ Create a `config.json` for the client. Enter the domain name you want to update,
     }
   }
 }
+```
+
+I strongly suggest using a JSON linter at this step—especially if you're using multiple domains.
+
+##Running the Container
+
+To run the container in Docker:
+```
+docker run -d --name gcpddns \
+-v $PATH_TO_CONFIG:/config \
+-p 8080:8080 \
+-e "GOOGLE_APPLICATION_CREDENTIALS=/config/google.json" \
+charlestephen/gcpddns:latest
+```
