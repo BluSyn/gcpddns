@@ -1,3 +1,5 @@
+module cloud-dyndns-client
+
 go 1.13
 
 require (
