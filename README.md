@@ -3,8 +3,11 @@
 This project is a containerized implementation of work done [here](https://github.com/ianlewis/cloud-dyndns-client/cmd/cloud-dyndns-client)
 It contains both the underlying application and necessary components to launch it directly in Docker.
 
-##Expected Variables
-
+##Docker Variables
+Volumes
+  - /pathToFile:/config/config.json
+Ports
+Credentials
 GOOGLE_APPLICATION_CREDENTIALS
 
 ### Google Cloud Platform Setup

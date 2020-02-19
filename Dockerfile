@@ -6,6 +6,6 @@ RUN cd /src/cmd/cloud-dyndns-client && go build -o /src/cloud-dyndns-client main
 FROM alpine:3 as final
 COPY --from=build /src/cloud-dyndns-client /cloud-dyndns-client
 RUN apk add --no-cache ca-certificates
-VOLUME /etc/cloud-dyndns-client
+VOLUME /config
 EXPOSE 8080
 CMD ["/cloud-dyndns-client"]
