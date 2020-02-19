@@ -7,8 +7,10 @@ It contains both the underlying application and necessary components to launch i
 
 Volumes
   - /config
+
 Ports
   - 8080
+
 Environmental
   - GOOGLE_APPLICATION_CREDENTIALS
 
