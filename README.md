@@ -3,7 +3,7 @@
 This project is a containerized implementation of work done [here](https://github.com/ianlewis/cloud-dyndns-client/cmd/cloud-dyndns-client)
 It contains both the underlying application and necessary components to launch it directly in Docker.
 
-##Docker Variables
+## Docker Variables
 
 Volumes
   - /config
@@ -12,7 +12,7 @@ Ports
 Environmental
   - GOOGLE_APPLICATION_CREDENTIALS
 
-##Configuration
+## Configuration
 
 1. You'll need to already have setup your DNS in GCP and created the necessary service account credentials, etc. This is beyond the scope of this project but instructions for it can be easily found online. Once you've secured your GCP credentials, save the JSON as `google.json`.
 
@@ -34,7 +34,7 @@ Environmental
 
 I strongly suggest using a JSON linter at this step—especially if you're using multiple domains.
 
-##Running the Container
+## Running the Container
 
 To run the container in Docker:
 ```
