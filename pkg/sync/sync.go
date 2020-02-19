@@ -23,7 +23,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ianlewis/cloud-dyndns-client/pkg/backend"
+	"github.com/charlestephen/gcpddns/pkg/backend"
 )
 
 type Record struct {

@@ -14,15 +14,10 @@
 
 steps:
 - name: 'gcr.io/cloud-builders/go'
-  args: ['generate']
-  env: ['PROJECT_ROOT=github.com/IanLewis/cloud-dyndns-client']
-- name: 'gcr.io/cloud-builders/go'
-  args: ['install', '-a', '-ldflags', "'-s'", '-installsuffix', 'cgo', 'github.com/IanLewis/cloud-dyndns-client']
-  env: [
-    'PROJECT_ROOT=github.com/IanLewis/cloud-dyndns-client',
+  args: ['install', '-a', '-installsuffix', 'cgo', 'github.com/charlestephen/gcpddns']
+  env: ['PROJECT_ROOT=github.com/charlestephen/gcpddns',
     'CGO_ENABLED=0',
-    'GOOS=linux'
-  ]
+    'GOOS=linux']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '--tag=asia.gcr.io/$PROJECT_ID/cloud-dyndns-client:$TAG_NAME', '.']
-images: ['asia.gcr.io/$PROJECT_ID/cloud-dyndns-client:$TAG_NAME']
+  args: ['build', '--tag=us.gcr.io/$PROJECT_ID/cloud-dyndns-client:$TAG_NAME', '.']
+images: ['us.gcr.io/$PROJECT_ID/gcpddns:$TAG_NAME']
