@@ -32,7 +32,7 @@ import (
 
 	"github.com/ianlewis/cloud-dyndns-client/pkg/backend"
 	"github.com/ianlewis/cloud-dyndns-client/pkg/backend/gcp"
-	"github.com/ianlewis/cloud-dyndns-clientpkg/sync"
+	"github.com/ianlewis/cloud-dyndns-client/pkg/sync"
 )
 
 // VERSION is the current version of the application.
