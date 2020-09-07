@@ -21,6 +21,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"log"
+	"net"
 	"net/http"
 	"os"
 	"os/signal"
@@ -112,6 +113,18 @@ func getConfig(pathToJSON string) (Config, error) {
 	return cfg, nil
 }
 
+func GetOutboundIP() net.IP {
+    conn, err := net.Dial("udp", "8.8.8.8:80")
+    if err != nil {
+        log.Fatal(err)
+    }
+    defer conn.Close()
+
+    localAddr := conn.LocalAddr().(*net.UDPAddr)
+
+    return localAddr.IP
+}
+
 // Main is the main function for the cloud-dyndns-client command. It returns the OS exit code.
 func main() {
 	addr := flag.String("addr", "", "Address to listen on for health checks.")
@@ -128,6 +141,10 @@ func main() {
 	cfg, err := getConfig(*config)
 	if err != nil {
 		log.Fatalf("Error reading config: %v", err)
+	}
+
+	if ("true" == os.Getenv("KUBERNETES")) {
+		*addr = fmt.Sprintf("%s:8080",GetOutboundIP().String())
 	}
 
 	// Convert config to sync records
