@@ -47,7 +47,7 @@ Environmental
 2.  In that same directory, create a `config.json` for the client. Enter the domain name you want to update, the GCP project ID, and Cloud DNS managed zone name. Multiple domains can be added as part of the configuration.
 
 
-    {
+    ```{
       "domains": {
         "mydomain.example.com": {
           "provider": "gcp",
@@ -57,7 +57,7 @@ Environmental
           }
         }
       }
-    }
+    }```
 
 I strongly suggest using a JSON linter at this step—especially if you're using multiple domains.
 
