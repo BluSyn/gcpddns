@@ -65,8 +65,8 @@ I strongly suggest using a JSON linter at this step—especially if you're using
 
 To run the container in Docker:
 
-  `docker run -d --name gcpddns \
+  docker run -d --name gcpddns \
   -v ${PATH}/config:/config \
   -p 8080:8080 \
   -e "GOOGLE_APPLICATION_CREDENTIALS=/config/google.json" \
-  charlestephen/gcpddns:latest`
+  charlestephen/gcpddns:latest
