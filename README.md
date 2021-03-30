@@ -16,16 +16,16 @@ You'll need to already have setup your DNS in GCP. This is beyond the scope of t
 
 1.  Create a GCP service account
 
-    SA_EMAIL=$(gcloud iam service-accounts --format='value(email)' create gcpddns)
+    `SA_EMAIL=$(gcloud iam service-accounts --format='value(email)' create gcpddns)`
 
 2.  Create a JSON key file associated with the new service account
 
-    gcloud iam service-accounts keys create service-account.json --iam-account=$SA_EMAIL
+    `gcloud iam service-accounts keys create service-account.json --iam-account=$SA_EMAIL`
 
 3.  Add an IAM policy to the service account for the project.
 
-    PROJECT=$(gcloud config list core/project --format='value(core.project)')
-    gcloud projects add-iam-policy-binding $PROJECT --member serviceAccount:$SA_EMAIL --role roles/dns.admin
+    `PROJECT=$(gcloud config list core/project --format='value(core.project)')`
+    `gcloud projects add-iam-policy-binding $PROJECT --member serviceAccount:$SA_EMAIL --role roles/dns.admin`
 
 Once you've secured your GCP credentials, save the JSON as `google.json` in a directory that will be accessible to the running image (/config below)
 
