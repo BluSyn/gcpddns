@@ -8,7 +8,7 @@ It contains both the underlying application and necessary components to launch i
 1.  GCP Project with domains setup with DNS and Service Accounts
 2.  Docker
 
-## Configuration
+## Configuration and Setup
 
 You'll need to already have setup your DNS in GCP. This is beyond the scope of this project but instructions can be found online. You'll also need to setup a service account and get credentials for it. To do so, follow the directions below.
 
@@ -65,8 +65,8 @@ I strongly suggest using a JSON linter at this step—especially if you're using
 
 To run the container in Docker:
 
-    docker run -d --name gcpddns \
-    -v $PATH_TO_CONFIG:/config \
-    -p 8080:8080 \
-    -e "GOOGLE_APPLICATION_CREDENTIALS=/config/google.json" \
-    charlestephen/gcpddns:latest
+  `docker run -d --name gcpddns \
+  -v ${PATH}/config:/config \
+  -p 8080:8080 \
+  -e "GOOGLE_APPLICATION_CREDENTIALS=/config/google.json" \
+  charlestephen/gcpddns:latest`
