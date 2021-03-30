@@ -5,7 +5,7 @@ It contains both the underlying application and necessary components to launch i
 
 ## Requirements
 
-1.  Google Cloud Platform project with Cloud DNS API enabled and domains active 
+1.  Google Cloud Platform project with Cloud DNS API enabled and domains active
 2.  Docker
 
 ## Configuration and Setup
@@ -31,17 +31,19 @@ Once you've secured your GCP credentials, save the JSON as `google.json` in a di
 
 ### Docker Setup
 
-Volumes
-
--   /config
-
-Ports
-
--   8080
+#### Docker Variables
 
 Environmental
 
 -   GOOGLE_APPLICATION_CREDENTIALS
+
+Ports
+
+-   8080:8080
+
+Volumes
+
+-   {$Path_to_config}/config:/config
 
 1.  Save the `google.json` service account credential in the directory you'll be using for this container.
 2.  In that same directory, create a `config.json` for the client. Enter the domain name you want to update, the GCP project ID, and Cloud DNS managed zone name. Multiple domains can be added as part of the configuration.
@@ -58,7 +60,7 @@ Environmental
           }
         }
 
-I strongly suggest using a JSON linter at this step—especially if you're using multiple domains.
+I strongly recommend using a JSON linter at this step—especially if you're using multiple domains.
 
 ## Running the Container
 
