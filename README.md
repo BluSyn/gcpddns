@@ -1,6 +1,6 @@
 # Google Cloud Platform Dynamic DNS Docker
 
-This project is a containerized implementation of work done [here](https://github.com/ianlewis/cloud-dyndns-client/cmd/cloud-dyndns-client)
+This project is a containerized implementation of work done [here.](https://github.com/ianlewis/cloud-dyndns-client/cmd/cloud-dyndns-client)
 It contains both the underlying application and necessary components to launch it directly in Docker.
 
 ## Requirements
