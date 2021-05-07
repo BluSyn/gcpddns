@@ -1,5 +1,5 @@
 <p align="center">
-	<img src="https://img.shields.io/badge/version-2.9.1-green.svg?style=for-the-badge">
+	<img src="https://img.shields.io/badge/version-2.0.3-green.svg?style=for-the-badge">
 	<a href="https://hub.docker.com/repository/docker/charlestephen/gcpddns">
 		<img src="https://img.shields.io/docker/stars/charlestephen/gcpddns.svg?style=for-the-badge">
 	</a>
