@@ -1,3 +1,13 @@
+<p align="center">
+	<img src="https://img.shields.io/badge/version-2.9.1-green.svg?style=for-the-badge">
+	<a href="https://hub.docker.com/repository/docker/charlestephen/gcpddns">
+		<img src="https://img.shields.io/docker/stars/charlestephen/gcpddns.svg?style=for-the-badge">
+	</a>
+	<a href="https://hub.docker.com/repository/docker/charlestephen/gcpddns">
+		<img src="https://img.shields.io/docker/pulls/charlestephen/gcpddns.svg?style=for-the-badge">
+	</a>
+</p>
+
 # Google Cloud Platform Dynamic DNS Docker
 
 This project is a containerized implementation of work done [here.](https://github.com/ianlewis/cloud-dyndns-client/cmd/cloud-dyndns-client)
