@@ -1,10 +1,10 @@
 <p align="center">
-	<img src="https://img.shields.io/badge/version-2.0.3-green.svg?style=for-the-badge">
-	<a href="https://hub.docker.com/repository/docker/charlestephen/gcpddns">
-		<img src="https://img.shields.io/docker/stars/charlestephen/gcpddns.svg?style=for-the-badge">
-	</a>
-	<a href="https://hub.docker.com/repository/docker/charlestephen/gcpddns">
-		<img src="https://img.shields.io/docker/pulls/charlestephen/gcpddns.svg?style=for-the-badge">
+  <a>
+  <a href="https://github.com/charlestephen/gcpddns/blob/master/LICENSE"><img alt="Github License" src="https://img.shields.io/github/license/charlestephen/gcpddns"></a>
+  <a href="https://github.com/charlestephen/gcpddns/issues"><img alt="Open Issues" src="https://img.shields.io/github/issues/charlestephen/gcpddns"></a>
+  <a href="https://hub.docker.com/repository/docker/charlestephen/gcpddns"><img alt="Docker Stars" src="https://img.shields.io/docker/stars/charlestephen/gcpddns.svg?style=for-the-badge">
+  <a href="https://hub.docker.com/repository/docker/charlestephen/gcpddns"><img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/charlestephen/gcpddns.svg?style=for-the-badge">
+  <a href="https://img.shields.io/twitter/url?url=https%3A%2F%2Fhub.docker.com%2Frepository%2Fdocker%2Fcharlestephen%2Fgcpddns"><img src="https://img.shields.io/twitter/url?url=https%3A%2F%2Fhub.docker.com%2Frepository%2Fdocker%2Fcharlestephen%2Fgcpddns">
 	</a>
 </p>
 
