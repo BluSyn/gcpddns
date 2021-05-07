@@ -1,5 +1,4 @@
 <p align="center">
-  <a>
   <a href="https://github.com/charlestephen/gcpddns/blob/master/LICENSE"><img alt="Github License" src="https://img.shields.io/github/license/charlestephen/gcpddns.svg?style=for-the-badge"></a>
   <a href="https://github.com/charlestephen/gcpddns/issues"><img alt="Open Issues" src="https://img.shields.io/github/issues/charlestephen/gcpddns.svg?style=for-the-badge"></a>
   <a href="https://hub.docker.com/repository/docker/charlestephen/gcpddns"><img alt="Docker Stars" src="https://img.shields.io/docker/stars/charlestephen/gcpddns.svg?style=for-the-badge">
