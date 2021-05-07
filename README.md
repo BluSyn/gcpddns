@@ -4,7 +4,6 @@
   <a href="https://github.com/charlestephen/gcpddns/issues"><img alt="Open Issues" src="https://img.shields.io/github/issues/charlestephen/gcpddns.svg?style=for-the-badge"></a>
   <a href="https://hub.docker.com/repository/docker/charlestephen/gcpddns"><img alt="Docker Stars" src="https://img.shields.io/docker/stars/charlestephen/gcpddns.svg?style=for-the-badge">
   <a href="https://hub.docker.com/repository/docker/charlestephen/gcpddns"><img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/charlestephen/gcpddns.svg?style=for-the-badge">
-  <a href="https://twitter.com/handyhomo"><img src="https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2Fcharlestephen%2Fgcpddns.svg?style=for-the-badge">
 	</a>
 </p>
 
