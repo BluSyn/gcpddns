@@ -3,7 +3,7 @@
   <a href="https://github.com/charlestephen/gcpddns/issues"><img alt="Open Issues" src="https://img.shields.io/github/issues/charlestephen/gcpddns.svg?style=for-the-badge"></a>
   <a href="https://hub.docker.com/repository/docker/charlestephen/gcpddns"><img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/charlestephen/gcpddns.svg?style=for-the-badge"></a>
   <a href="https://github.com/charlestephen/gcpddns/actions/workflows/anchore-analysis.yml"><img alt="Anchore Container Scan" src="https://github.com/charlestephen/gcpddns/actions/workflows/anchore-analysis.yml/badge.svg"></a>
-  <a href="https://github.com/charlestephen/gcpddns/actions/workflows/SemVer.yaml"><img alt="Version" src="https://github.com/charlestephen/gcpddns/actions/workflows/SemVer.yaml/badge.svg?event=release"></a>
+  <a href="https://github.com/charlestephen/gcpddns/actions/workflows/SemVer.yaml"><img alt="Version" src="https://img.shields.io/github/v/release/charlestephen/gcpddns?style=for-the-badge></a>
 </p>
 
 # Google Cloud Platform Dynamic DNS Docker
