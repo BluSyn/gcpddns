@@ -1,8 +1,9 @@
 <p align="center">
   <a href="https://github.com/charlestephen/gcpddns/blob/master/LICENSE"><img alt="Github License" src="https://img.shields.io/github/license/charlestephen/gcpddns.svg?style=for-the-badge"></a>
   <a href="https://github.com/charlestephen/gcpddns/issues"><img alt="Open Issues" src="https://img.shields.io/github/issues/charlestephen/gcpddns.svg?style=for-the-badge"></a>
-  <a href="https://hub.docker.com/repository/docker/charlestephen/gcpddns"><img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/charlestephen/gcpddns.svg?style=for-the-badge">
-	</a>
+  <a href="https://hub.docker.com/repository/docker/charlestephen/gcpddns"><img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/charlestephen/gcpddns.svg?style=for-the-badge"></a>
+  <a href="https://github.com/charlestephen/gcpddns/actions/workflows/anchore-analysis.yml"><img alt="Anchore Container Scan" src="https://github.com/charlestephen/gcpddns/actions/workflows/anchore-analysis.yml/badge.svg"></a>
+  <a href="https://github.com/charlestephen/gcpddns/actions/workflows/SemVer.yaml"><img alt="Version" src="https://github.com/charlestephen/gcpddns/actions/workflows/SemVer.yaml/badge.svg?event=release"></a>
 </p>
 
 # Google Cloud Platform Dynamic DNS Docker
@@ -12,8 +13,8 @@ It contains both the underlying application and necessary components to launch i
 
 ## Requirements
 
-1.  Google Cloud Platform project with Cloud DNS API enabled and domains active
-2.  Docker
+1. Google Cloud Platform project with Cloud DNS API enabled and domains active
+2. Docker
 
 ## Configuration and Setup
 
@@ -21,18 +22,18 @@ You'll need to already have setup your DNS in GCP. This is beyond the scope of t
 
 ### GCP Service Account Setup
 
-1.  Create a GCP service account
+1. Create a GCP service account
 
-    `SA_EMAIL=$(gcloud iam service-accounts --format='value(email)' create gcpddns)`
+   `SA_EMAIL=$(gcloud iam service-accounts --format='value(email)' create gcpddns)`
 
-2.  Create a JSON key file associated with the new service account
+2. Create a JSON key file associated with the new service account
 
-    `gcloud iam service-accounts keys create service-account.json --iam-account=$SA_EMAIL`
+   `gcloud iam service-accounts keys create service-account.json --iam-account=$SA_EMAIL`
 
-3.  Add an IAM policy to the service account for the project.
+3. Add an IAM policy to the service account for the project.
 
-    `PROJECT=$(gcloud config list core/project --format='value(core.project)')`
-    `gcloud projects add-iam-policy-binding $PROJECT --member serviceAccount:$SA_EMAIL --role roles/dns.admin`
+   `PROJECT=$(gcloud config list core/project --format='value(core.project)')`
+   `gcloud projects add-iam-policy-binding $PROJECT --member serviceAccount:$SA_EMAIL --role roles/dns.admin`
 
 Once you've secured your GCP credentials, save the JSON as `google.json` in a directory that will be accessible to the running image (/config below)
 
@@ -42,15 +43,15 @@ Once you've secured your GCP credentials, save the JSON as `google.json` in a di
 
 Environmental
 
--   GOOGLE_APPLICATION_CREDENTIALS
+- GOOGLE_APPLICATION_CREDENTIALS
 
 Ports
 
--   8080:8080
+- 8080:8080
 
 Volumes
 
--   {$Path_to_config}/config:/config
+- {$Path_to_config}/config:/config
 
 1.  Save the `google.json` service account credential in the directory you'll be using for this container.
 2.  In that same directory, create a `config.json` for the client. Enter the domain name you want to update, the GCP project ID, and Cloud DNS managed zone name. Multiple domains can be added as part of the configuration.
