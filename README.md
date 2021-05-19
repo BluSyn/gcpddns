@@ -6,7 +6,7 @@
   <a href="https://github.com/charlestephen/gcpddns/commits/master"><img alt="Last Commit" src="https://img.shields.io/github/last-commit/charlestephen/gcpddns?style=for-the-badge"></a>
   <a href="https://github.com/charlestephen/gcpddns/actions/workflows/SemVer.yaml"><img alt="Version" src="https://img.shields.io/github/v/release/charlestephen/gcpddns?style=for-the-badge"></a>
 </p>
-https://img.shields.io/github/last-commit/charlestephen/gcpddns?style=for-the-badge
+
 # Google Cloud Platform Dynamic DNS Docker
 
 This project is a containerized implementation of work done [here.](https://github.com/ianlewis/cloud-dyndns-client/cmd/cloud-dyndns-client)
