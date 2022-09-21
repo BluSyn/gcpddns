@@ -188,6 +188,7 @@ func main() {
 			select {
 			case ip := <-c:
 				for _, r := range records {
+					log.Printf("Updating record %v @ %v", r.Record.Name(), ip)
 					syncer.UpdateRecord(
 						r.Record.Name(),
 						r.Record.Type(),
@@ -235,6 +236,8 @@ func main() {
 			}
 		})
 	}
+
+	log.Printf("Running...")
 
 	// Wait for SIGINT or SIGTERM signals and shutdown the application if
 	// one is received.
